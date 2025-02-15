@@ -22,10 +22,16 @@ cd api-laravel
 composer install
 ```
 4. Copiar archivo .env.example y llamarlo .env
+```bash
+cp .env.example .env
+```
 
-5. Llenar las variables de entorno `DB_HOST` `DB_PORT` `DB_DATABASE` `DB_USERNAME` `DB_PASSWORD` del nuevo archivo .env
+5. Llenar las variables de entorno `DB_HOST` `DB_PORT` `DB_DATABASE` `DB_USERNAME` `DB_PASSWORD` del nuevo archivo .env, ejecutar el comando
+```bash
+php artisan key:generate
+```
 
-5. Ejecutar servidor laravel
+6. Ejecutar servidor laravel
 ```bash
 php artisan serve
 ```
@@ -40,6 +46,9 @@ cd api_node
 npm install
 ```
 9. Copiar archivo .env.example y llamarlo .env
+```bash
+cp .env.example .env
+```
 
 10. Llenar las variables de entorno del nuevo archivo .env `API_URL` que seria la ip del servidor de laravel y  `PORT` que seria el puerto del servidor de node.
 
@@ -60,7 +69,7 @@ npm run start
 ```json
 {
   "nombre": "Impresora",
-  "sku": "XX001234567",
+  "sku": "XX001234567"
 }
 ```
 ### Respuesta
@@ -71,8 +80,7 @@ npm run start
   "data": {
     "nombre": "Impresora",
     "sku": "XX001234567",
-    "id": 1,
-    "createdAt": "2025-02-15 02:21:16"
+    "id": 1
   }
 }
 ```
@@ -87,7 +95,7 @@ npm run start
 ```json
 {
   "nombre": "Impresora",
-  "sku": "XX001234567",
+  "sku": "XX001234567"
 }
 ```
 ### Respuesta
@@ -100,7 +108,6 @@ npm run start
     "nombre": "Impresora",
     "sku": "xx0011234567",
     "createdAt": "2025-02-15 02:21:16"
-
   }
 }
 ```
@@ -161,5 +168,3 @@ npm run start
   ]
 }
 ```
-
-
